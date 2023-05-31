@@ -18,4 +18,8 @@ export const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  // Header logo
+  tinyLogo: {
+    marginEnd: 20,
+  },
 });
