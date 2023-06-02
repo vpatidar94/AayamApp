@@ -25,6 +25,7 @@ import MonthlySubscriptionScreen from './screens/monthlysubscription/MonthlySubs
 
 
 
+import NeetSection from './screens/neet/NeetSection';
 import {Image} from 'react-native';
 import {color} from './styles/color';
 import {styles} from './styles/style';
@@ -38,7 +39,7 @@ const headerOptions = {
   },
   headerTintColor: color.white,
   headerRight: () => (
-    <Image style={styles.tinyLogo} source={require('./assets/logo/tiny.jpg')} />
+    <Image style={styles.tinyLogo} source={require('./assets/logo/logo1.jpg')} />
   ),
 };
 
@@ -46,6 +47,8 @@ function App(): JSX.Element {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
+       
+        <Drawer.Screen name="NeetSection" component={NeetSection}  options={headerOptions} />
         <Drawer.Screen
           name="Home"
           component={HomeScreen}

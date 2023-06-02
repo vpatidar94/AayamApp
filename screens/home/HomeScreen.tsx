@@ -31,11 +31,93 @@ function HomeScreen(prop: any): JSX.Element {
                   justifyContent: 'center',
                 }}
               >
-                <Image source={item}
+                <View style={{width:'100%', margin:20,flex: 1, flexDirection:'row', alignItems: 'center', justifyContent: 'center' , flexWrap: 'wrap'}}> 
+          <View >
+          <TouchableOpacity  onPress={() => prop.navigation.navigate('Test')}>
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+              
+            />
+             </TouchableOpacity>
+
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+           
+          <View >  
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+              
+            />
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+          <View>  
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+            />
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+          <View>  
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+            />
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+          <View >  
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+            />
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+          <View>  
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+            />
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+          <View>  
+            <Image
+              source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              cache: 'only-if-cached',
+            }}
+              style={{width:80, height: 80 ,margin:10}}
+            />
+            <Text style={{textAlign:'center'}}>NEET</Text>
+          </View>
+          
+
+            
+          </View>
+          <Image source={item}
                   style={{ width: width, height: 200 }} />
               </View>
             )}
           />
+          
         </View>
         {/* this the section of Courses */}
         <View style={{ width: '100%', marginTop: 20, flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>

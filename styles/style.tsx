@@ -33,4 +33,18 @@ export const styles = StyleSheet.create({
     borderBottomColor: '#737373',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
+  //option Title
+  optionTitle:{
+    fontSize: 16,
+    fontWeight: '600'
+  },
+  optionHeading1:{
+    fontSize: 14,
+    fontWeight: '600'
+  },
+  optionHeading2:{
+    fontSize: 12,
+    fontWeight: '600'
+  }
+
 });
