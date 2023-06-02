@@ -22,4 +22,15 @@ export const styles = StyleSheet.create({
   tinyLogo: {
     marginEnd: 20,
   },
+  //particular course heading
+  courseHeading: {
+    color:"blue",
+    fontSize:18,
+    marginTop:8,
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
 });
