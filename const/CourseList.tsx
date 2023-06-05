@@ -1,7 +1,7 @@
 export const courseList = [
     {
       url: 'https://reactjs.org/logo-og.png',
-      option: 'NeetUg',
+      option: 'NeetSection',
     },
     {
       url: 'https://reactjs.org/logo-og.png',

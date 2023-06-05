@@ -6,6 +6,11 @@ export const styles = StyleSheet.create({
     marginTop: 32,
     paddingHorizontal: 24,
   },
+  commonContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+  },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
@@ -45,6 +50,13 @@ export const styles = StyleSheet.create({
   optionHeading2:{
     fontSize: 12,
     fontWeight: '600'
-  }
+  },
+  //for footer
+  footerButton: {
+    marginTop: 10,
+    fontSize: 8,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
 
 });
