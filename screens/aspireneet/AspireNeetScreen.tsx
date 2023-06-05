@@ -74,7 +74,9 @@ function AspireNeetScreen(prop: any): JSX.Element {
                             <TouchableOpacity onPress={() => prop.navigation.navigate('MonthlySubscription')}>
                                 <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Monthly Subscription</Text>
                             </TouchableOpacity>
-                            <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Yearly Subscription</Text>
+                            <TouchableOpacity onPress={() => prop.navigation.navigate('YearlySubscription')}>
+                                <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Yearly Subscription</Text>
+                            </TouchableOpacity>
                         </View>
                         <View>
                             <Text style={AspireNeetStyle.subHeading}>Other Details</Text>

@@ -22,6 +22,7 @@ import QuestionBankScreen from './screens/questionbank/QuestionBankScreen';
 import LiveCoursesScreen from './screens/livecourses/LiveCoursesScreen';
 import AspireNeetScreen from './screens/aspireneet/AspireNeetScreen';
 import MonthlySubscriptionScreen from './screens/monthlysubscription/MonthlySubscriptionScreen';
+import YearlySubscriptionScreen from './screens/yearlysubscription/YearlySubscriptionScreen'; 
 
 
 
@@ -47,8 +48,11 @@ function App(): JSX.Element {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-       
-        <Drawer.Screen name="NeetSection" component={NeetSection}  options={headerOptions} />
+        <Drawer.Screen 
+        name="NeetSection" 
+        component={NeetSection}  
+        options={headerOptions} 
+        />
         <Drawer.Screen
           name="Home"
           component={HomeScreen}
@@ -123,6 +127,11 @@ function App(): JSX.Element {
           options={headerOptions}
           name="MonthlySubscription"
           component={MonthlySubscriptionScreen}
+        />
+        <Drawer.Screen
+          options={headerOptions}
+          name="YearlySubscription"
+          component={YearlySubscriptionScreen}
         />
         
       </Drawer.Navigator>

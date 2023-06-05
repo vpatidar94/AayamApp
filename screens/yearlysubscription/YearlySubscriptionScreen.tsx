@@ -1,35 +1,36 @@
-
 import React, { useState } from 'react';
 import { Button, SafeAreaView, ScrollView, Text, View, TouchableOpacity, Image } from 'react-native';
-import { monthlyPurchasingList } from '../../const/MonthlyPurchasingList';
+import { yearlyPurchasingList } from '../../const/YearlyPurchasingList';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
 import Footer from '../../components/footer/Footer';
 
 const Separator = () => <View style={styles.separator} />;
-function MonthlySubscriptionScreen(prop: any): JSX.Element {
-    const [checkedItems, setCheckedItems] = useState(Array(monthlyPurchasingList.length).fill(true));
+function YearlySubscriptionScreen(prop: any): JSX.Element {
+    const [checkedItems, setCheckedItems] = useState(Array(yearlyPurchasingList.length).fill(true));
 
     const handleCheckboxChange = (index: number) => {
         const updatedCheckedItems = [...checkedItems];
         updatedCheckedItems[index] = !checkedItems[index];
         setCheckedItems(updatedCheckedItems);
     };
+
     const calculateTotalPrice = () => {
         let totalPrice = 0;
-        monthlyPurchasingList.forEach((item, index) => {
+        yearlyPurchasingList.forEach((item, index) => {
             if (checkedItems[index]) {
                 totalPrice += parseInt(item.price);
             }
         });
         return totalPrice;
     };
+
     return (
         <SafeAreaView style={styles.commonContainer}>
             <ScrollView contentInsetAdjustmentBehavior="automatic">
                 <View style={{ flex: 1 }}>
-                    <Text style={[styles.sectionTitle, { color: color.secondary }, { marginTop: 8 }, { marginBottom: 8 }]}>Purchase Monthly Subscription</Text>
-                    {monthlyPurchasingList.map((item, index) => {
+                    <Text style={[styles.sectionTitle, { color: color.secondary }, { marginTop: 8 }, { marginBottom: 8 }]}>Purchase Yearly Subscription</Text>
+                    {yearlyPurchasingList.map((item, index) => {
                         return (
                             <View key={index}>
                                 <TouchableOpacity onPress={() => handleCheckboxChange(index)}>
@@ -48,10 +49,9 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                                             {checkedItems[index] && (
                                                 <Text style={{ fontSize: 16, fontWeight: 'bold' }}>&#10003;</Text>
                                             )}
-
                                         </View>
                                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginBottom: 12 }}>
-                                            <Text style={{ textAlign: 'center', fontSize: 14, marginRight: 18 }}>{item.purchasingItem}</Text>
+                                            <Text style={{ textAlign: 'center', fontSize: 14, marginRight: 12 }}>{item.purchasingItem}</Text>
                                             <Text style={{ textAlign: 'center', fontSize: 14 }}>{item.price}</Text>
                                         </View>
                                     </View>
@@ -84,6 +84,7 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
         </SafeAreaView>
     );
 }
-export default MonthlySubscriptionScreen;
+
+export default YearlySubscriptionScreen;
 
 
