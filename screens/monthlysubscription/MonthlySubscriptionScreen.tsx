@@ -65,9 +65,6 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                             <Text style={[styles.sectionTitle, { color: color.secondary }, { marginTop: 8 }, { marginBottom: 8 }]}>
                                 Purchase Monthly Subscription
                             </Text>
-
-
-                            {/* <Text style={[styles.sectionTitle, { color: color.secondary }, { marginTop: 8 }, { marginBottom: 8 }]}>Purchase Monthly Subscription</Text> */}
                             {monthlyPurchasingList.map((item, index) => {
                                 return (
                                     <View key={index}>
@@ -85,18 +82,16 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                                                     }}
                                                 >
                                                     {checkedItems[index] && (
-                                                        <Text style={{ fontSize: 16, fontWeight: 'bold' }}>&#10003;</Text>
+                                                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: color.green}}>&#10003;</Text>
                                                     )}
 
                                                 </View>
-                                                {/* <View style={{ flexDirection: 'row', justifyContent: "flex-start", marginBottom: 12 }}> */}
                                                 <View style={{ width: "40%" }}>
                                                     <Text style={{ textAlign: "justify", fontSize: 14, marginRight: 18 }}>{item.purchasingItem}</Text>
                                                 </View>
                                                 <View >
                                                     <Text style={{ textAlign: 'center', fontSize: 14 }}>{item.price}</Text>
                                                 </View>
-                                                {/* </View> */}
                                             </View>
                                         </TouchableOpacity>
                                     </View>
@@ -111,7 +106,6 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                                 onPress={() => prop.navigation.navigate('test')}
                             />
                             <Separator />
-
                             <View>
                                 <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
                                     style={{ height: 200, marginBottom: 20, marginTop: 20 }} />

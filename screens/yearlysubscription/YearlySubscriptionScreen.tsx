@@ -47,7 +47,7 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
                                             }}
                                         >
                                             {checkedItems[index] && (
-                                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}>&#10003;</Text>
+                                                <Text style={{ fontSize: 18, fontWeight: 'bold', color: color.green}}>&#10003;</Text>
                                             )}
                                         </View>
                                         <View style={{ width: "40%" }}>
