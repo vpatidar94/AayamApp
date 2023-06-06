@@ -34,7 +34,7 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
                         return (
                             <View key={index}>
                                 <TouchableOpacity onPress={() => handleCheckboxChange(index)}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row', justifyContent: "flex-start" }}>
                                         <View
                                             style={{
                                                 width: 24,
@@ -50,8 +50,10 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
                                                 <Text style={{ fontSize: 16, fontWeight: 'bold' }}>&#10003;</Text>
                                             )}
                                         </View>
-                                        <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginBottom: 12 }}>
-                                            <Text style={{ textAlign: 'center', fontSize: 14, marginRight: 12 }}>{item.purchasingItem}</Text>
+                                        <View style={{ width: "40%" }}>
+                                            <Text style={{ textAlign: "justify", fontSize: 14, marginRight: 18 }}>{item.purchasingItem}</Text>
+                                        </View>
+                                        <View >
                                             <Text style={{ textAlign: 'center', fontSize: 14 }}>{item.price}</Text>
                                         </View>
                                     </View>
@@ -86,5 +88,3 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
 }
 
 export default YearlySubscriptionScreen;
-
-

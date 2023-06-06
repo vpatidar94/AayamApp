@@ -27,7 +27,7 @@ const footerOption = [
     },
   ]
 
-function Footer(prop: any): JSX.Element {
+function Footer(props: any): JSX.Element {
   return (
     <SafeAreaView>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
@@ -42,7 +42,7 @@ function Footer(prop: any): JSX.Element {
           {footerOption.map((item, index) => {
             return (
               <View key={index}>
-                <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
+                <TouchableOpacity onPress={() => props.navigation.navigate(item.option)}>
                   <Image
                     source={{
                       uri: item.url,

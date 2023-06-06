@@ -23,9 +23,6 @@ import LiveCoursesScreen from './screens/livecourses/LiveCoursesScreen';
 import AspireNeetScreen from './screens/aspireneet/AspireNeetScreen';
 import MonthlySubscriptionScreen from './screens/monthlysubscription/MonthlySubscriptionScreen';
 import YearlySubscriptionScreen from './screens/yearlysubscription/YearlySubscriptionScreen'; 
-
-
-
 import NeetSection from './screens/neet/NeetSection';
 import {Image} from 'react-native';
 import {color} from './styles/color';
