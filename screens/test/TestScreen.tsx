@@ -16,5 +16,4 @@ function TestScreen(prop: any): JSX.Element {
     </SafeAreaView>
   );
 }
-
 export default TestScreen;

@@ -82,7 +82,7 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                                                     }}
                                                 >
                                                     {checkedItems[index] && (
-                                                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: color.green}}>&#10003;</Text>
+                                                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: color.green }}>&#10003;</Text>
                                                     )}
 
                                                 </View>
@@ -115,7 +115,7 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                                     style={{ height: 200, marginBottom: 20, marginTop: 20 }} />
                             </View>
                             <View >
-                                <Footer />
+                                <Footer navigation={prop.navigation} />
                             </View>
                         </>
                     ) : (

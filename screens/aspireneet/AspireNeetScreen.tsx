@@ -83,7 +83,7 @@ function AspireNeetScreen(prop: any): JSX.Element {
                             <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minima est voluptatem itaque doloribus reprehenderit, recusandae magnam vero dicta quasi mollitia animi inventore labore non nesciunt. Obcaecati voluptate doloremque itaque.</Text>
                         </View>
                     </View>
-                    <Footer />
+                    <Footer navigation={prop.navigation} />
                 </View>
             </ScrollView>
         </SafeAreaView>

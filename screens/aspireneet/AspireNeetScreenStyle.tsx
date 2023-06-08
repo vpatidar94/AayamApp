@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import { color } from "../../styles/color";
 
 export const AspireNeetStyle = StyleSheet.create({
-    
     mainOption: {
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -45,7 +44,7 @@ export const AspireNeetStyle = StyleSheet.create({
         marginBottom: 5,
     },
     sectionHeaderTitle: {
-        fontSize: 14,                                                                                                                   
+        fontSize: 14,
     },
 
 });

@@ -26,20 +26,13 @@ function HomeScreen(prop: any): JSX.Element {
             data={carouselImage}
             scrollAnimationDuration={1000}
             renderItem={({ item }) => (
-              <View
-                style={{
-                  flex: 1,
-                  borderWidth: 1,
-                  justifyContent: 'center',
-                }}
-              >
+              <View style={{ flex: 1, borderWidth: 1, justifyContent: 'center', }}>
                 <Image source={item}
                   style={{ width: width, height: 200 }} />
               </View>
             )}
           />
         </View>
-
         <View style={HomeStyle.courseBlock}>
           {courseList.map((item, index) => {
             return (
@@ -70,7 +63,7 @@ function HomeScreen(prop: any): JSX.Element {
           placeholder='Find Your Course'
         />
         {/* now button portion of footer */}
-        <Footer />
+        <Footer navigation={prop.navigation} />
       </ScrollView>
     </SafeAreaView >
   );

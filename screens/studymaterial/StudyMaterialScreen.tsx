@@ -16,5 +16,4 @@ function StudyMaterialScreen(prop: any): JSX.Element {
     </SafeAreaView>
   );
 }
-
 export default StudyMaterialScreen;
