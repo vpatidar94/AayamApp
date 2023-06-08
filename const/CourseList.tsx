@@ -1,30 +1,30 @@
 export const courseList = [
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/neet-ug.png'),
     option: 'NeetSection',
   },
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/jee.png'),
     option: 'Jee',
   },
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/cbse-board.png'),
     option: 'CbseBoard',
   },
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/test-series.png'),
     option: 'TestSeries',
   },
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/study-material-2.png'),
     option: 'StudyMaterial',
   },
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/test-series.png'),
     option: 'QuestionBank',
   },
   {
-    url: 'https://reactjs.org/logo-og.png',
+    url: require('./../assets/courses/live-courses-2.png'),
     option: 'LiveCourses',
   },
 

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { color } from '../../styles/color';
 
 export const HomeStyle = StyleSheet.create({
 
@@ -22,7 +23,26 @@ export const HomeStyle = StyleSheet.create({
         flex: 1, 
         flexDirection: 'row', 
         alignItems: 'center', 
-        justifyContent: 'center', 
+        justifyContent:"center", 
         flexWrap: 'wrap' 
+    },
+    courseImageBackground: {
+      backgroundColor: color.primary, 
+      borderRadius:100,
+      marginRight:6
+    },
+    courseImageStyle: {
+      width: 40, 
+      height: 40, 
+      margin: 20, 
+      backgroundColor:color.primary,
+    },
+    courseText: {
+      textAlign: 'center', 
+      fontSize: 12, 
+      fontWeight: 'bold',
+      color: color.black, 
+      marginBottom: 20, 
+      marginTop: 10 
     }
   });

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { color } from "../../styles/color";
 
 export const FooterStyle = StyleSheet.create({
     footerButton: {
@@ -11,10 +12,14 @@ export const FooterStyle = StyleSheet.create({
     },
     footerImage: {
         width: '60%',
-        height: 20
+        height: 50,
+        marginLeft:"20%"
+        
     },
     footerText: {
         textAlign: 'center',
-        fontSize: 12
+        fontSize: 14,
+        fontWeight: "bold",
+        color: color.black,
     }
 });

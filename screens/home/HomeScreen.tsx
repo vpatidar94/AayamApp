@@ -4,11 +4,9 @@ import Carousel from 'react-native-reanimated-carousel';
 import Footer from '../../components/footer/Footer';
 import { courseList } from '../../const/CourseList';
 import { styles } from '../../styles/style';
+import { color } from '../../styles/color';
 import { HomeStyle } from './HomeScreenStyle';
-
-const carouselImage = [
-  require('../../assets/carousel/carousel-1.png'), require('../../assets/carousel/carousel-2.jpg'), require('../../assets/carousel/carousel-3.jpg'), require('../../assets/carousel/carousel-4.jpg'), require('../../assets/carousel/carousel-5.png'), require('../../assets/carousel/carousel-6.png'), require('../../assets/carousel/carousel-7.png'), require('../../assets/carousel/carousel-8.png'),
-]
+import { carouselImage } from '../../const/CarouselImagesList';
 
 function HomeScreen(prop: any): JSX.Element {
   const [text, onChangeText] = useState('');
@@ -36,17 +34,18 @@ function HomeScreen(prop: any): JSX.Element {
         <View style={HomeStyle.courseBlock}>
           {courseList.map((item, index) => {
             return (
-              <View key={index}>
-                <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
-                  <Image
-                    source={{
-                      uri: item.url,
-                      cache: 'only-if-cached',
-                    }}
-                    style={{ width: 70, height: 80, margin: 10 }}
-                  />
-                  <Text style={{ textAlign: 'center', fontSize: 12 }}>{item.option}</Text>
-                </TouchableOpacity>
+              <View>
+                <View key={index} style={HomeStyle.courseImageBackground}>
+                  <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
+                    <Image
+                      source={
+                        item.url
+                      }
+                      style={HomeStyle.courseImageStyle}
+                    />
+                  </TouchableOpacity>
+                </View>
+                <Text style={HomeStyle.courseText}>{item.option}</Text>
               </View>
             );
           })}
@@ -54,7 +53,7 @@ function HomeScreen(prop: any): JSX.Element {
         {/* Here below one dummy image is added in place of image to be added */}
         <View>
           <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
-            style={{ height: 200, marginBottom: 20, marginTop: 20 }} />
+            style={{ height: 180, marginBottom: 20, marginTop: 20 }} />
         </View>
         <TextInput
           style={HomeStyle.input}
@@ -62,7 +61,7 @@ function HomeScreen(prop: any): JSX.Element {
           value={text}
           placeholder='Find Your Course'
         />
-        {/* now button portion of footer */}
+        {/* button portion of footer */}
         <Footer navigation={prop.navigation} />
       </ScrollView>
     </SafeAreaView >

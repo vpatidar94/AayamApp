@@ -57,7 +57,8 @@ function AspireNeetScreen(prop: any): JSX.Element {
                     <View style={AspireNeetStyle.mainOption}>
                         {facultyList.map((item, index) => {
                             return (
-                                <View key={index} style={AspireNeetStyle.optionContainer}>
+
+                                <View key={item.id} style={AspireNeetStyle.optionContainer}>
                                     <Text>{item.name}</Text>
                                     <Text>{item.sub}</Text>
                                 </View>

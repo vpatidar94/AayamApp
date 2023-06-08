@@ -10,36 +10,36 @@ import Footer from '../../components/footer/Footer';
 const Separator = () => <View style={styles.separator} />;
 
 function MyCourseScreen(prop: any): JSX.Element {
-  const [selectedOption, setSelectedOption] = useState<string | null>('1');
-  const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-  const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
-  const [selectedLecture, setSelectedLecture] = useState<string | null>(null);
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>('1');
+  const [selectedSubjectId, setSelectedSubjectId] = useState<string | null>(null);
+  const [selectedChapterId, setSelectedChapterId] = useState<string | null>(null);
+  const [selectedLectureId, setSelectedLectureId] = useState<string | null>(null);
 
   const handleOptionClick = (optionId: string) => {
-    setSelectedOption(optionId);
-    setSelectedSubject(null);
-    setSelectedChapter(null);
-    setSelectedLecture(null);
+    setSelectedOptionId(optionId);
+    setSelectedSubjectId(null);
+    setSelectedChapterId(null);
+    setSelectedLectureId(null);
   };
 
   const handleSubjectClick = (subjectId: string) => {
-    setSelectedSubject(subjectId);
-    setSelectedChapter(null);
-    setSelectedLecture(null);
+    setSelectedSubjectId(subjectId);
+    setSelectedChapterId(null);
+    setSelectedLectureId(null);
   };
 
   const handleChapterClick = (chapterId: string) => {
-    setSelectedChapter(chapterId);
-    setSelectedLecture(null);
+    setSelectedChapterId(chapterId);
+    setSelectedLectureId(null);
   };
 
   const handleLectureClick = (lectureId: string) => {
-    setSelectedLecture(lectureId);
+    setSelectedLectureId(lectureId);
   };
 
-  const selectedOptionData = myCourseOptionList.find((option) => option.id === selectedOption);
+  const selectedOptionData = myCourseOptionList.find((option) => option.id === selectedOptionId);
   const selectedSubjectData =
-    selectedOptionData?.subject.find((subject) => subject.id === selectedSubject) || null;
+    selectedOptionData?.subject.find((subject) => subject.id === selectedSubjectId) || null;
 
   return (
     <SafeAreaView style={styles.commonContainer}>
@@ -57,7 +57,7 @@ function MyCourseScreen(prop: any): JSX.Element {
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
           {myCourseOptionList.map((option) => (
             <TouchableOpacity key={option.id} onPress={() => handleOptionClick(option.id)}>
-              <View style={[option.id === selectedOption && { backgroundColor: color.primary, padding: 4, borderRadius: 5 }]}>
+              <View style={[option.id === selectedOptionId && { backgroundColor: color.primary, padding: 4, borderRadius: 5 }]}>
                 <Text style={{ fontSize: 15, fontWeight: 'bold' }}>{option.name}</Text>
               </View>
             </TouchableOpacity>
@@ -66,20 +66,20 @@ function MyCourseScreen(prop: any): JSX.Element {
         <Separator />
         {selectedSubjectData === null && (
           <ScrollView horizontal={true}>
-          <View style={{ flexDirection: 'row'}}>
-            {selectedOptionData?.subject.map((subject) => (
-              <TouchableOpacity key={subject.id} onPress={() => handleSubjectClick(subject.id)}>
-                
-                <View style={myCourseScreenStyle.subjectBlock} >
-                  <Text style={myCourseScreenStyle.subjectText}>{subject.name}</Text>
-                </View>
-              </TouchableOpacity> 
-            ))}
-          </View>
+            <View style={{ flexDirection: 'row' }}>
+              {selectedOptionData?.subject.map((subject) => (
+                <TouchableOpacity key={subject.id} onPress={() => handleSubjectClick(subject.id)}>
+
+                  <View style={myCourseScreenStyle.subjectBlock} >
+                    <Text style={myCourseScreenStyle.subjectText}>{subject.name}</Text>
+                  </View>
+                </TouchableOpacity>
+              ))}
+            </View>
           </ScrollView>
 
         )}
-        {selectedSubjectData !== null && selectedChapter === null && (
+        {selectedSubjectData !== null && selectedChapterId === null && (
           <View>
             {selectedSubjectData.chapters.map((chapter) => (
               <TouchableOpacity key={chapter.id} onPress={() => handleChapterClick(chapter.id)}>
@@ -90,10 +90,10 @@ function MyCourseScreen(prop: any): JSX.Element {
             ))}
           </View>
         )}
-        {selectedChapter !== null && selectedLecture === null && (
+        {selectedChapterId !== null && selectedLectureId === null && (
           <View >
             {selectedSubjectData?.chapters.map((chapter) => {
-              if (chapter.id === selectedChapter) {
+              if (chapter.id === selectedChapterId) {
                 return chapter.lectures.map((lecture) => (
                   <TouchableOpacity key={lecture.id} onPress={() => handleLectureClick(lecture.id)}>
                     <View style={myCourseScreenStyle.lectureBlock}>
@@ -106,12 +106,12 @@ function MyCourseScreen(prop: any): JSX.Element {
             })}
           </View>
         )}
-        {selectedLecture !== null && (
+        {selectedLectureId !== null && (
           <View>
             {selectedSubjectData?.chapters.map((chapter) => {
-              if (chapter.id === selectedChapter) {
+              if (chapter.id === selectedChapterId) {
                 return chapter.lectures.map((lecture) => {
-                  if (lecture.id === selectedLecture) {
+                  if (lecture.id === selectedLectureId) {
                     return lecture.videos.map((video) => (
                       <TouchableOpacity key={video.id}>
                         <View style={myCourseScreenStyle.videoBlock}>

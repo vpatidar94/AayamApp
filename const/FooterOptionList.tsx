@@ -1,23 +1,23 @@
 export const footerOption = [
     {
-        url: 'https://reactjs.org/logo-og.png',
+        url: require('./../assets/footer/my-courses.jpg'),
         option: 'MyCourse',
         text: 'My Course'
     },
     {
-        url: 'https://reactjs.org/logo-og.png',
+        url: require('./../assets/footer/downloads.png'),
         option: 'Downloads',
         text: 'Downloads'
 
     },
     {
-        url: 'https://reactjs.org/logo-og.png',
+        url: require('./../assets/footer/request-a-call.png'),
         option: 'RequestACall',
         text: 'Request Call'
 
     },
     {
-        url: 'https://reactjs.org/logo-og.png',
+        url: require('./../assets/footer/chat-with-us.png'),
         option: 'ChatWithUs',
         text: 'Chat with us'
 

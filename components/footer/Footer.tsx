@@ -13,10 +13,7 @@ function Footer(prop: any): JSX.Element {
               <View key={index}>
                 <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
                   <Image
-                    source={{
-                      uri: item.url,
-                      cache: 'only-if-cached',
-                    }}
+                    source={item.url}
                     style={FooterStyle.footerImage}
                   />
                   <Text style={FooterStyle.footerText}>{item.text}</Text>
