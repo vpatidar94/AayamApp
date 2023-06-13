@@ -79,9 +79,9 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
                     <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
                         style={{ height: 200, marginBottom: 20, marginTop: 20 }} />
                 </View>
-                <View >
-                    <Footer navigation={prop.navigation} />
-                </View>
+                {/* <View > */}
+                    <Footer navigation={prop.navigation}/>
+                {/* </View> */}
             </ScrollView>
         </SafeAreaView>
     );

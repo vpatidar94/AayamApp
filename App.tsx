@@ -5,6 +5,7 @@
  * @format
  */
 import {createDrawerNavigator} from '@react-navigation/drawer';
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import HomeScreen from './screens/home/HomeScreen';
@@ -28,9 +29,11 @@ import {Image} from 'react-native';
 import {color} from './styles/color';
 import {styles} from './styles/style';
 import DppScreen from './screens/dpp/DppScreen';
+import CourseSubscription from './screens/coursesubscription/CourseSubscription';
+import AayamLogo from './components/aayamlogo/AayamLogo';
 
 const Drawer = createDrawerNavigator();
-
+const Stack = createNativeStackNavigator();
 const headerOptions = {
   headerTitle: '',
   headerStyle: {
@@ -38,7 +41,8 @@ const headerOptions = {
   },
   headerTintColor: color.white,
   headerRight: () => (
-    <Image style={styles.tinyLogo} source={require('./assets/logo/logo1.jpg')} />
+    // <Image style={styles.tinyLogo} source={require('./assets/logo/logo1.jpg')} />
+    <AayamLogo/>
   ),
 };
 
@@ -136,8 +140,25 @@ function App(): JSX.Element {
           name="DppScreen"
           component={DppScreen}
         />
+         <Drawer.Screen
+          options={headerOptions}
+          name="CourseSubscription"
+          component={CourseSubscription}
+        />
         
       </Drawer.Navigator>
+      
+
+      {/* <Stack.Navigator>
+      <Stack.Screen
+      options={headerOptions}
+      name="YearlySubscription"
+      component={YearlySubscriptionScreen}
+      
+    />
+     </Stack.Navigator> */}
+
+
     </NavigationContainer>
   );
 }
