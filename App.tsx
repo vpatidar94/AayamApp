@@ -41,7 +41,6 @@ const headerOptions = {
   },
   headerTintColor: color.white,
   headerRight: () => (
-    // <Image style={styles.tinyLogo} source={require('./assets/logo/logo1.jpg')} />
     <AayamLogo/>
   ),
 };
@@ -49,6 +48,7 @@ const headerOptions = {
 function App(): JSX.Element {
   return (
     <NavigationContainer>
+      
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen 
         name="NeetSection" 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, Text, View, SectionList, Image, TouchableOpacity } from 'react-native';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
@@ -10,6 +10,12 @@ import { facultyList } from '../../const/FacultyList';
 
 const Separator = () => <View style={styles.separator} />;
 function AspireNeetScreen(prop: any): JSX.Element {
+    const [selectedFaculty, setSelectedFaculty] = useState<any | null>(null);
+
+    const handleFacultyPress = (faculty: any) => {
+        setSelectedFaculty(faculty);
+    };
+
     return (
         <SafeAreaView style={styles.commonContainer}>
             <ScrollView contentInsetAdjustmentBehavior="automatic">
@@ -55,39 +61,52 @@ function AspireNeetScreen(prop: any): JSX.Element {
                 <View>
                     <Text style={AspireNeetStyle.subHeading}>Faculties (Click to know more)</Text>
                     <View style={AspireNeetStyle.mainOption}>
-                        {facultyList.map((item, index) => {
-                            return (
 
-                                <View key={item.id} style={AspireNeetStyle.optionContainer}>
-                                    <Text>{item.name}</Text>
-                                    <Text>{item.sub}</Text>
-                                </View>
-                            )
-                        })}
-                    </View>
-                    <View>
-                        <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
-                            style={{ height: 200, marginBottom: 20, marginTop: 20 }} />
-                    </View>
-                    <View>
-                        <Text style={AspireNeetStyle.subHeading}>Fee Details</Text>
-                        <View>
-                            <TouchableOpacity onPress={() => prop.navigation.navigate('CourseSubscription')}>
-                                <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Monthly Subscription</Text>
+                        {facultyList.map((faculty) => (
+                            <TouchableOpacity
+                                key={faculty.id}
+                                style={AspireNeetStyle.optionContainer}
+                                onPress={() => handleFacultyPress(faculty)}
+                            >
+                                {/* <Image source={faculty.image} style={styles.facultyImage} /> */}
+                                <Text>{faculty.name}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={() => prop.navigation.navigate('CourseSubscription')}>
-                                <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Yearly Subscription</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View>
-                            <Text style={AspireNeetStyle.subHeading}>Other Details</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minima est voluptatem itaque doloribus reprehenderit, recusandae magnam vero dicta quasi mollitia animi inventore labore non nesciunt. Obcaecati voluptate doloremque itaque.</Text>
-                        </View>
+                        ))}
                     </View>
-                    <Footer navigation={prop.navigation} />
+                    {selectedFaculty && (
+                        <View >
+                            <Text >{selectedFaculty.description}</Text>
+                        </View>
+                    )}
+                    {!selectedFaculty && (
+                        <View>
+                            <Text>'</Text>
+                        </View>
+                    )}
                 </View>
+                <View>
+                    <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
+                        style={{ height: 200, marginBottom: 20, marginTop: 20 }} />
+                </View>
+                <View>
+                    <Text style={AspireNeetStyle.subHeading}>Fee Details</Text>
+                    <View>
+                        <TouchableOpacity onPress={() => prop.navigation.navigate('CourseSubscription')}>
+                            <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Monthly Subscription</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => prop.navigation.navigate('CourseSubscription')}>
+                            <Text style={{ backgroundColor: color.light_blue, marginBottom: 8, color: color.white, padding: 5 }}>Yearly Subscription</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View>
+                        <Text style={AspireNeetStyle.subHeading}>Other Details</Text>
+                        <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minima est voluptatem itaque doloribus reprehenderit, recusandae magnam vero dicta quasi mollitia animi inventore labore non nesciunt. Obcaecati voluptate doloremque itaque.</Text>
+                    </View>
+                </View>
+                <Footer navigation={prop.navigation} />
+
             </ScrollView>
-        </SafeAreaView>
+        </SafeAreaView >
     );
 };
 export default AspireNeetScreen
