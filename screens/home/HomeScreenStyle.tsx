@@ -36,6 +36,7 @@ export const HomeStyle = StyleSheet.create({
       height: 40, 
       margin: 20, 
       backgroundColor:color.primary,
+      alignSelf:"center"
     },
     courseText: {
       textAlign: 'center', 

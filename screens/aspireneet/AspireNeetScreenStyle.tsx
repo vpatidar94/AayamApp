@@ -15,7 +15,6 @@ export const AspireNeetStyle = StyleSheet.create({
         color: color.black,
     },
     optionContainer: {
-        width: 86,
         padding: 4,
         margin: 5,
         flex: 1,

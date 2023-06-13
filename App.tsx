@@ -27,6 +27,7 @@ import NeetSection from './screens/neet/NeetSection';
 import {Image} from 'react-native';
 import {color} from './styles/color';
 import {styles} from './styles/style';
+import DppScreen from './screens/dpp/DppScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -129,6 +130,11 @@ function App(): JSX.Element {
           options={headerOptions}
           name="YearlySubscription"
           component={YearlySubscriptionScreen}
+        />
+        <Drawer.Screen
+          options={headerOptions}
+          name="DppScreen"
+          component={DppScreen}
         />
         
       </Drawer.Navigator>

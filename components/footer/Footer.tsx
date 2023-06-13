@@ -10,7 +10,7 @@ function Footer(prop: any): JSX.Element {
         <View style={FooterStyle.footerButton}>
           {footerOption.map((item, index) => {
             return (
-              <View key={index}>
+              <View key={index} style={{flex:1, justifyContent:"center"}}>
                 <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
                   <Image
                     source={item.url}

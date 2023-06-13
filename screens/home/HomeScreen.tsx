@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, SafeAreaView, ScrollView, Text, View, Image, StyleSheet, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import { Button, SafeAreaView, ScrollView, Text, View, Image, TouchableOpacity, TextInput, Dimensions } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import Footer from '../../components/footer/Footer';
 import { courseList } from '../../const/CourseList';
@@ -24,7 +24,7 @@ function HomeScreen(prop: any): JSX.Element {
             data={carouselImage}
             scrollAnimationDuration={1000}
             renderItem={({ item }) => (
-              <View style={{ flex: 1, borderWidth: 1, justifyContent: 'center', }}>
+              <View style={{ flex: 1, justifyContent: 'center', }}>
                 <Image source={item}
                   style={{ width: width, height: 200 }} />
               </View>
@@ -38,9 +38,7 @@ function HomeScreen(prop: any): JSX.Element {
                 <View key={index} style={HomeStyle.courseImageBackground}>
                   <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
                     <Image
-                      source={
-                        item.url
-                      }
+                      source={item.url}
                       style={HomeStyle.courseImageStyle}
                     />
                   </TouchableOpacity>

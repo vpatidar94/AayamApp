@@ -3,23 +3,22 @@ import { color } from "../../styles/color";
 
 export const FooterStyle = StyleSheet.create({
     footerButton: {
+        flex:1,
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginTop: 10,
+        marginTop: 20,
         fontSize: 8,
         fontWeight: 'bold',
-        textAlign: 'center',
     },
     footerImage: {
+        alignSelf:"center",
         width: '60%',
         height: 50,
-        marginLeft:"20%"
         
     },
     footerText: {
-        textAlign: 'center',
         fontSize: 14,
         fontWeight: "bold",
         color: color.black,
+        alignSelf:"center"
     }
 });

@@ -10,4 +10,5 @@ export const color = {
   grey: '#999999',
   green: '#028A0F',
   lightslategrey: "#778899",
+  lightsalmon: "#deb887",
 };
