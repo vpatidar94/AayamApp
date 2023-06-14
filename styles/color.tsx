@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export const color = {
   primary: '#85C1E9',
   secondary: '#1B4F72',
@@ -9,6 +10,6 @@ export const color = {
   light_blue: '#7db3ba',
   grey: '#999999',
   green: '#028A0F',
-  lightslategrey: "#778899",
-  lightsalmon: "#deb887",
+  lightslategrey: '#778899',
+  lightsalmon: '#deb887',
 };

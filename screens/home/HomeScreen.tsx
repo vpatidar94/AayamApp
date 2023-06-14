@@ -1,10 +1,11 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { Button, SafeAreaView, ScrollView, Text, View, Image, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import { SafeAreaView, ScrollView, Text, View, Image, TouchableOpacity, TextInput, Dimensions } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import Footer from '../../components/footer/Footer';
 import { courseList } from '../../const/CourseList';
 import { styles } from '../../styles/style';
-import { color } from '../../styles/color';
 import { HomeStyle } from './HomeScreenStyle';
 import { carouselImage } from '../../const/CarouselImagesList';
 
@@ -24,7 +25,7 @@ function HomeScreen(prop: any): JSX.Element {
             data={carouselImage}
             scrollAnimationDuration={1000}
             renderItem={({ item }) => (
-              <View style={{ flex: 1, justifyContent: 'center', }}>
+              <View style={{ flex: 1, justifyContent: 'center' }}>
                 <Image source={item}
                   style={{ width: width, height: 200 }} />
               </View>
@@ -57,7 +58,7 @@ function HomeScreen(prop: any): JSX.Element {
           style={HomeStyle.input}
           onChangeText={onChangeText}
           value={text}
-          placeholder='Find Your Course'
+          placeholder="Find Your Course"
         />
         {/* button portion of footer */}
         <Footer navigation={prop.navigation} />

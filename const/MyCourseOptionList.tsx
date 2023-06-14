@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export const myCourseOptionList = [
     {
       id: '1',
@@ -98,8 +99,6 @@ export const myCourseOptionList = [
             // Add more chapters...
           ],
         },
-        
-        
         {
             id: '2',
             name: 'Chemistry',
@@ -241,8 +240,6 @@ export const myCourseOptionList = [
         // Add more subjects...
       ],
     },
-    
-    
     {
         id: '2',
         name: 'DPPs',
@@ -302,7 +299,6 @@ export const myCourseOptionList = [
           // Add more subjects...
         ],
       },
-
 
       {
         id: '3',
@@ -364,7 +360,6 @@ export const myCourseOptionList = [
         ],
       },
 
-
       {
         id: '4',
         name: 'Test Series',
@@ -425,7 +420,5 @@ export const myCourseOptionList = [
         ],
       },
 
-      
     // Add more options...
   ];
-  

@@ -1,5 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+// import AspireNeetDescription from '../../components/aspireneetdescription/AspireNeetDescription';
 
 function LiveCoursesScreen(prop: any): JSX.Element {
   return (
@@ -12,6 +15,7 @@ function LiveCoursesScreen(prop: any): JSX.Element {
             onPress={() => prop.navigation.navigate('Home')}
           />
         </View>
+        {/* <AspireNeetDescription/> */}
       </ScrollView>
     </SafeAreaView>
   );

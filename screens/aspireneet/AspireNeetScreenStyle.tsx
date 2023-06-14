@@ -1,49 +1,24 @@
-import { StyleSheet } from "react-native";
-import { color } from "../../styles/color";
+/* eslint-disable prettier/prettier */
+import { StyleSheet } from 'react-native';
+import { color } from '../../styles/color';
 
 export const AspireNeetStyle = StyleSheet.create({
-    mainOption: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        fontSize: 8,
-        fontWeight: 'bold',
-        textAlign: 'center',
+    subscriptionToggle: {
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        borderWidth: 1,
+        borderColor: color.black,
+        borderRadius: 8,
+        // marginRight: 8,
     },
-    subHeading: {
-        fontSize: 18,
-        fontWeight: '700',
+    activeSubscriptionToggle: {
+        backgroundColor: color.black,
+    },
+    subscriptionToggleText: {
+        fontSize: 14,
         color: color.black,
     },
-    optionContainer: {
-        padding: 4,
-        margin: 5,
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: color.primary,
-        borderRadius: 4,
+    activeSubscriptionToggleText: {
+        color: color.white,
     },
-    listDataStyle: {
-        fontWeight: '900',
-        marginBottom: 5,
-        marginLeft: 15,
-
-    },
-    square: {
-        width: 8,
-        height: 8,
-        backgroundColor: color.grey,
-        marginRight: 5,
-        borderRadius: 8,
-    },
-    sectionHeaderContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 5,
-    },
-    sectionHeaderTitle: {
-        fontSize: 14,
-    },
-
 });

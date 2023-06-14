@@ -1,5 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import {SafeAreaView, ScrollView, Text, View, TouchableOpacity,} from 'react-native';
+import { SafeAreaView, ScrollView, Text, View, TouchableOpacity, } from 'react-native';
 import { monthlyPurchasingList } from '../../const/MonthlyPurchasingList';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
@@ -23,9 +26,7 @@ function CourseSubscription(prop: any): JSX.Element {
         <SafeAreaView style={styles.commonContainer}>
             <ScrollView contentInsetAdjustmentBehavior="automatic">
                 <View style={{ flex: 1 }}>
-
                     {/* newly added code for toggle btn */}
-
                     <View style={{ flexDirection: 'row', justifyContent: 'center', marginVertical: 16 }}>
                         <TouchableOpacity
                             style={[courseSubscriptionStyle.subscriptionToggle, activeScreen === 'monthly' && courseSubscriptionStyle.activeSubscriptionToggle]}
@@ -44,13 +45,12 @@ function CourseSubscription(prop: any): JSX.Element {
                             </Text>
                         </TouchableOpacity>
                     </View>
-
                     {activeScreen === 'monthly' ? (
                         <MonthlySubscriptionScreen />) : (<YearlySubscriptionScreen />)}
                 </View>
                 <Footer navigation={prop.navigation} />
             </ScrollView>
-        </SafeAreaView>)
+        </SafeAreaView>);
 
 }
 export default CourseSubscription;

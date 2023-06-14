@@ -1,5 +1,6 @@
-import {StyleSheet} from "react-native";
-import { color } from "../../styles/color";
+/* eslint-disable prettier/prettier */
+import {StyleSheet} from 'react-native';
+import { color } from '../../styles/color';
 
 export const myCourseScreenStyle = StyleSheet.create({
     subjectBlock: {
@@ -16,8 +17,8 @@ export const myCourseScreenStyle = StyleSheet.create({
     },
     subjectText: {
       fontSize: 18,
-      textAlign: "center",
-      fontWeight: "900",
+      textAlign: 'center',
+      fontWeight: '900',
       color:color.black,
     },
     chapterBlock: {
@@ -34,7 +35,7 @@ export const myCourseScreenStyle = StyleSheet.create({
     },
     lectureBlock: {
       backgroundColor: color.lightslategrey,
-      opacity: 0.4, 
+      opacity: 0.4,
       padding: 8,
       borderRadius: 5,
       marginBottom: 8,

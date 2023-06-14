@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
 
@@ -16,5 +18,4 @@ function CbseBoardScreen(prop: any): JSX.Element {
     </SafeAreaView>
   );
 }
-
 export default CbseBoardScreen;

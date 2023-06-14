@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
-import { color } from "../../styles/color";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
+import { StyleSheet } from 'react-native';
+import { color } from '../../styles/color';
 
 export const courseSubscriptionStyle = StyleSheet.create({
     subscriptionToggle: {

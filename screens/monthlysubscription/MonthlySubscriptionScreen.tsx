@@ -1,5 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { Button, SafeAreaView, ScrollView, Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { Button, SafeAreaView, ScrollView, Text, View, TouchableOpacity, Image} from 'react-native';
 import { monthlyPurchasingList } from '../../const/MonthlyPurchasingList';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
@@ -35,7 +37,7 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                         return (
                             <View key={index}>
                                 <TouchableOpacity onPress={() => handleCheckboxChange(index)}>
-                                    <View style={{ flexDirection: 'row', justifyContent: "flex-start" }}>
+                                    <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
                                         <View
                                             style={{
                                                 width: 24,
@@ -52,8 +54,8 @@ function MonthlySubscriptionScreen(prop: any): JSX.Element {
                                             )}
 
                                         </View>
-                                        <View style={{ width: "40%" }}>
-                                            <Text style={{ textAlign: "justify", fontSize: 14, marginRight: 18 }}>{item.purchasingItem}</Text>
+                                        <View style={{ width: '40%' }}>
+                                            <Text style={{ textAlign: 'justify', fontSize: 14, marginRight: 18 }}>{item.purchasingItem}</Text>
                                         </View>
                                         <View >
                                             <Text style={{ textAlign: 'center', fontSize: 14 }}>{item.price}</Text>

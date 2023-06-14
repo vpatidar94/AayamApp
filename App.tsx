@@ -1,12 +1,13 @@
+/* eslint-disable prettier/prettier */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
  * @format
  */
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {NavigationContainer} from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import HomeScreen from './screens/home/HomeScreen';
 import TestScreen from './screens/test/TestScreen';
@@ -23,37 +24,33 @@ import QuestionBankScreen from './screens/questionbank/QuestionBankScreen';
 import LiveCoursesScreen from './screens/livecourses/LiveCoursesScreen';
 import AspireNeetScreen from './screens/aspireneet/AspireNeetScreen';
 import MonthlySubscriptionScreen from './screens/monthlysubscription/MonthlySubscriptionScreen';
-import YearlySubscriptionScreen from './screens/yearlysubscription/YearlySubscriptionScreen'; 
+import YearlySubscriptionScreen from './screens/yearlysubscription/YearlySubscriptionScreen';
 import NeetSection from './screens/neet/NeetSection';
-import {Image} from 'react-native';
-import {color} from './styles/color';
-import {styles} from './styles/style';
+import { color } from './styles/color';
 import DppScreen from './screens/dpp/DppScreen';
 import CourseSubscription from './screens/coursesubscription/CourseSubscription';
 import AayamLogo from './components/aayamlogo/AayamLogo';
 
 const Drawer = createDrawerNavigator();
-const Stack = createNativeStackNavigator();
+// const Stack = createNativeStackNavigator();
 const headerOptions = {
   headerTitle: '',
   headerStyle: {
     backgroundColor: color.primary,
   },
   headerTintColor: color.white,
-  headerRight: () => (
-    <AayamLogo/>
-  ),
+  headerRight: () => <AayamLogo />,
 };
 
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      
+
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen 
-        name="NeetSection" 
-        component={NeetSection}  
-        options={headerOptions} 
+        <Drawer.Screen
+          name="NeetSection"
+          component={NeetSection}
+          options={headerOptions}
         />
         <Drawer.Screen
           name="Home"
@@ -140,21 +137,20 @@ function App(): JSX.Element {
           name="DppScreen"
           component={DppScreen}
         />
-         <Drawer.Screen
+        <Drawer.Screen
           options={headerOptions}
           name="CourseSubscription"
           component={CourseSubscription}
         />
-        
+
       </Drawer.Navigator>
-      
+
 
       {/* <Stack.Navigator>
       <Stack.Screen
       options={headerOptions}
       name="YearlySubscription"
       component={YearlySubscriptionScreen}
-      
     />
      </Stack.Navigator> */}
 
