@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Button, Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { styles } from '../../styles/style';
-import { color } from '../../styles/color';
+import { styles } from '../../../styles/style';
+import { color } from '../../../styles/color';
 
 function NeetSection(prop: any): JSX.Element {
   const courses = [

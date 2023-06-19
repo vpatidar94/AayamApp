@@ -1,10 +1,8 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { Button, SafeAreaView, ScrollView, Text, View, TouchableOpacity, Image} from 'react-native';
-import { monthlyPurchasingList } from '../../const/MonthlyPurchasingList';
-import { styles } from '../../styles/style';
-import { color } from '../../styles/color';
+import { Button, SafeAreaView, ScrollView, Text, View, TouchableOpacity, Image } from 'react-native';
+import { monthlyPurchasingList } from '../../../const/MonthlyPurchasingList';
+import { styles } from '../../../styles/style';
+import { color } from '../../../styles/color';
 
 const Separator = () => <View style={styles.separator} />;
 function MonthlySubscriptionScreen(prop: any): JSX.Element {

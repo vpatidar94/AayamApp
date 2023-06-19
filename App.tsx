@@ -6,33 +6,32 @@
  * @format
  */
 import { createDrawerNavigator } from '@react-navigation/drawer';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import HomeScreen from './screens/home/HomeScreen';
 import TestScreen from './screens/test/TestScreen';
-import MyCourseScreen from './screens/mycourse/MyCourseScreen';
-import DownloadsScreen from './screens/downloads/DownloadsScreen';
-import RequestACallScreen from './screens/requestacall/RequestACallScreen';
-import ChatWithUsScreen from './screens/chatwithus/ChatWithUsScreen';
-import NeetUgScreen from './screens/neetug/NeetUgScreen';
-import JeeScreen from './screens/jee/JeeScreen';
-import CbseBoardScreen from './screens/cbseboard/CbseBoardScreen';
-import TestSeriesScreen from './screens/testseries/TestSeriesScreen';
-import StudyMaterialScreen from './screens/studymaterial/StudyMaterialScreen';
-import QuestionBankScreen from './screens/questionbank/QuestionBankScreen';
-import LiveCoursesScreen from './screens/livecourses/LiveCoursesScreen';
-import AspireNeetScreen from './screens/aspireneet/AspireNeetScreen';
-import MonthlySubscriptionScreen from './screens/monthlysubscription/MonthlySubscriptionScreen';
-import YearlySubscriptionScreen from './screens/yearlysubscription/YearlySubscriptionScreen';
-import NeetSection from './screens/neet/NeetSection';
+import MyCourseScreen from './screens/footerscreens/mycourse/MyCourseScreen';
+import DownloadsScreen from './screens/footerscreens/downloads/DownloadsScreen';
+import RequestACallScreen from './screens/footerscreens/requestacall/RequestACallScreen';
+import ChatWithUsScreen from './screens/footerscreens/chatwithus/ChatWithUsScreen';
+import JeeScreen from './screens/courses/jee/JeeScreen';
+import CbseBoardScreen from './screens/courses/cbseboard/CbseBoardScreen';
+import TestSeriesScreen from './screens/courses/testseries/TestSeriesScreen';
+import StudyMaterialScreen from './screens/courses/studymaterial/StudyMaterialScreen';
+import QuestionBankScreen from './screens/courses/questionbank/QuestionBankScreen';
+import LiveCoursesScreen from './screens/courses/livecourses/LiveCoursesScreen';
+import AspireNeetScreen from './screens/courses/neet/aspireneet/AspireNeetScreen';
+import MonthlySubscriptionScreen from './screens/coursesubscription/monthlysubscription/MonthlySubscriptionScreen';
+import YearlySubscriptionScreen from './screens/coursesubscription/yearlysubscription/YearlySubscriptionScreen';
+import NeetSection from './screens/courses/neet/NeetSection';
 import { color } from './styles/color';
 import DppScreen from './screens/dpp/DppScreen';
 import CourseSubscription from './screens/coursesubscription/CourseSubscription';
 import AayamLogo from './components/aayamlogo/AayamLogo';
 
 const Drawer = createDrawerNavigator();
-// const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 const headerOptions = {
   headerTitle: '',
   headerStyle: {
@@ -45,13 +44,7 @@ const headerOptions = {
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen
-          name="NeetSection"
-          component={NeetSection}
-          options={headerOptions}
-        />
         <Drawer.Screen
           name="Home"
           component={HomeScreen}
@@ -63,9 +56,9 @@ function App(): JSX.Element {
           component={TestScreen}
         />
         <Drawer.Screen
+          name="NeetSection"
+          component={NeetSection}
           options={headerOptions}
-          name="NeetUg"
-          component={NeetUgScreen}
         />
         <Drawer.Screen
           options={headerOptions}
@@ -99,64 +92,79 @@ function App(): JSX.Element {
         />
         <Drawer.Screen
           options={headerOptions}
-          name="MyCourse"
-          component={MyCourseScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
-          name="Downloads"
-          component={DownloadsScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
-          name="RequestACall"
-          component={RequestACallScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
-          name="ChatWithUs"
-          component={ChatWithUsScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
-          name="AspireNeet"
-          component={AspireNeetScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
-          name="MonthlySubscription"
-          component={MonthlySubscriptionScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
-          name="YearlySubscription"
-          component={YearlySubscriptionScreen}
-        />
-        <Drawer.Screen
-          options={headerOptions}
+          // options={{
+          //   drawerItemStyle: { height: 0 }
+          // }}
           name="DppScreen"
           component={DppScreen}
         />
         <Drawer.Screen
-          options={headerOptions}
+          // 
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="MyCourse"
+          component={MyCourseScreen}
+        />
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="Downloads"
+          component={DownloadsScreen}
+        />
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="RequestACall"
+          component={RequestACallScreen}
+        />
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="ChatWithUs"
+          component={ChatWithUsScreen}
+        />
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="AspireNeet"
+          component={AspireNeetScreen}
+        />
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="MonthlySubscription"
+          component={MonthlySubscriptionScreen}
+        />
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          name="YearlySubscription"
+          component={YearlySubscriptionScreen}
+        />
+        
+        <Drawer.Screen
+          // options={headerOptions}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
           name="CourseSubscription"
           component={CourseSubscription}
         />
-
       </Drawer.Navigator>
-
-
-      {/* <Stack.Navigator>
-      <Stack.Screen
-      options={headerOptions}
-      name="YearlySubscription"
-      component={YearlySubscriptionScreen}
-    />
-     </Stack.Navigator> */}
-
-
     </NavigationContainer>
   );
 }
-
 export default App;

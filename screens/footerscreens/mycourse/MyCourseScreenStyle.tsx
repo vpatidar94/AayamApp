@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
-import { color } from '../../styles/color';
+import { color } from '../../../styles/color';
 
 export const myCourseScreenStyle = StyleSheet.create({
     subjectBlock: {

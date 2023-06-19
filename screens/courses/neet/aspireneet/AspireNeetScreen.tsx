@@ -1,6 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react';
 import {
     SafeAreaView,
@@ -11,16 +8,16 @@ import {
     Image,
     TouchableOpacity,
 } from 'react-native';
-import { styles } from '../../styles/style';
-import { color } from '../../styles/color';
-import { AspireNeetStyle } from '../../screens/aspireneet/AspireNeetScreenStyle';
-import Footer from '../../components/footer/Footer';
-import { quantityList } from '../../const/QuantityList';
-import { otherDetails } from '../../const/OtherDetailsList';
-import { facultyList } from '../../const/FacultyList';
+import { styles } from '../../../../styles/style';
+import { color } from '../../../../styles/color';
+import { AspireNeetStyle } from './AspireNeetScreenStyle';
+import Footer from '../../../../components/footer/Footer';
+import { quantityList } from '../../../../const/QuantityList';
+import { otherDetails } from '../../../../const/OtherDetailsList';
+import { facultyList } from '../../../../const/FacultyList';
 // import { courseSubscriptionStyle } from '../../screens/coursesubscription/CourseSubscriptionStyle';
-import TestScreen from '../../screens/test/TestScreen';
-import AspireNeetDescription from '../../components/aspireneetdescription/AspireNeetDescription';
+import TestScreen from '../../../test/TestScreen';
+import AspireNeetDescription from '../../../../components/aspireneetdescription/AspireNeetDescription';
 
 const Separator = () => <View style={styles.separator} />;
 function AspireNeetScreen(prop: any): JSX.Element {

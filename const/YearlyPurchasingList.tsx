@@ -14,7 +14,7 @@ export const yearlyPurchasingList = [
     {
         purchasingItem: 'Doubt Pannel',
         price: '12000'
-    }, 
+    },
     {
         purchasingItem: 'Printed Material',
         price: '12000'

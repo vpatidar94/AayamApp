@@ -1,14 +1,11 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, Text, View, TouchableOpacity, } from 'react-native';
 import { monthlyPurchasingList } from '../../const/MonthlyPurchasingList';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
 import Footer from '../../components/footer/Footer';
-import MonthlySubscriptionScreen from '../monthlysubscription/MonthlySubscriptionScreen';
-import YearlySubscriptionScreen from '../yearlysubscription/YearlySubscriptionScreen';
+import MonthlySubscriptionScreen from './monthlysubscription/MonthlySubscriptionScreen';
+import YearlySubscriptionScreen from './yearlysubscription/YearlySubscriptionScreen';
 import { courseSubscriptionStyle } from './CourseSubscriptionStyle';
 
 const Separator = () => <View style={styles.separator} />;
@@ -50,7 +47,7 @@ function CourseSubscription(prop: any): JSX.Element {
                 </View>
                 <Footer navigation={prop.navigation} />
             </ScrollView>
-        </SafeAreaView>);
-
+        </SafeAreaView>
+    );
 }
 export default CourseSubscription;

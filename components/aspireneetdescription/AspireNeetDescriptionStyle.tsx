@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { StyleSheet } from 'react-native';
 import { color } from '../../styles/color';
 
@@ -59,5 +58,17 @@ export const AspireNeetDescriptionStyle = StyleSheet.create({
         width: '80%',
         maxHeight: '80%',
     },
+    closeButton: {
+        position: 'absolute',
+        top: 10,
+        right: 10,
+        padding: 10,
+        zIndex: 1,
+      },
+      closeButtonText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'black',
+      },
 
 });

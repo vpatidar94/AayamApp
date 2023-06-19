@@ -3,11 +3,11 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { Button, SafeAreaView, ScrollView, Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import { styles } from '../../styles/style';
-import { color } from '../../styles/color';
-import { myCourseOptionList } from '../../const/MyCourseOptionList';
+import { styles } from '../../../styles/style';
+import { color } from '../../../styles/color';
+import { myCourseOptionList } from '../../../const/MyCourseOptionList';
 import { myCourseScreenStyle } from './MyCourseScreenStyle';
-import Footer from '../../components/footer/Footer';
+import Footer from '../../../components/footer/Footer';
 
 
 const Separator = () => <View style={styles.separator} />;

@@ -11,10 +11,10 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {yearlyPurchasingList} from '../../const/YearlyPurchasingList';
-import {styles} from '../../styles/style';
-import {color} from '../../styles/color';
-import Footer from '../../components/footer/Footer';
+import {yearlyPurchasingList} from '../../../const/YearlyPurchasingList';
+import {styles} from '../../../styles/style';
+import {color} from '../../../styles/color';
+import Footer from '../../../components/footer/Footer';
 
 const Separator = () => <View style={styles.separator} />;
 function YearlySubscriptionScreen(prop: any): JSX.Element {

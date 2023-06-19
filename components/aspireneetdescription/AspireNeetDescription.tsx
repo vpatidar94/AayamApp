@@ -1,7 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, Text, View, SectionList, Image, TouchableOpacity, Modal, TouchableWithoutFeedback } from 'react-native';
+import { Button, SafeAreaView, ScrollView, Text, View, SectionList, Image, TouchableOpacity, Modal, TouchableWithoutFeedback } from 'react-native';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
 import { AspireNeetDescriptionStyle } from './AspireNeetDescriptionStyle';
@@ -59,6 +57,7 @@ function AspireNeetDescription(prop: any): JSX.Element {
                 <Separator />
                 <View>
                     <Text style={AspireNeetDescriptionStyle.subHeading}>Faculties (Click to know more)</Text>
+                    {/* <ScrollView horizontal={true}> */}
                     <View style={AspireNeetDescriptionStyle.mainOption}>
 
                         {facultyList.map((faculty) => (
@@ -74,17 +73,21 @@ function AspireNeetDescription(prop: any): JSX.Element {
                                 </View></TouchableOpacity>
                         ))}
                     </View>
+                    {/* </ScrollView> */}
                     <Modal visible={isModalVisible} transparent={true} onRequestClose={closeModal}>
                         <TouchableWithoutFeedback onPress={closeModal}>
                             <View style={AspireNeetDescriptionStyle.modalBackground}>
                                 <View style={AspireNeetDescriptionStyle.modalContent}>
                                     {/* Display the faculty details here */}
+                                    <TouchableOpacity onPress={closeModal} style={AspireNeetDescriptionStyle.closeButton}>
+                                        <Text style={AspireNeetDescriptionStyle.closeButtonText}>X</Text>
+                                    </TouchableOpacity>
                                     <Text>{selectedFaculty && selectedFaculty.description}</Text>
                                     <Text>{selectedFaculty && selectedFaculty.name}</Text>
                                     <Text>{selectedFaculty && selectedFaculty.sub}</Text>
                                     <Image
-                                        source={{ uri: selectedFaculty && selectedFaculty.image }}
-                                        style={{ height: 200, marginBottom: 20, marginTop: 20 }}
+                                        source={selectedFaculty && selectedFaculty.image}
+                                        style={{ width: '90%', height: '50%', marginBottom: 20, marginTop: 20 }}
                                     />
                                     <View>
                                         <Text>{selectedFaculty && selectedFaculty.introduction}</Text>

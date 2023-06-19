@@ -1,13 +1,20 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, Text, View, Image, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import React, {useState} from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  TextInput,
+  Dimensions,
+} from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import Footer from '../../components/footer/Footer';
-import { courseList } from '../../const/CourseList';
-import { styles } from '../../styles/style';
-import { HomeStyle } from './HomeScreenStyle';
-import { carouselImage } from '../../const/CarouselImagesList';
+import {courseList} from '../../const/CourseList';
+import {styles} from '../../styles/style';
+import {HomeStyle} from './HomeScreenStyle';
+import {carouselImage} from '../../const/CarouselImagesList';
 
 function HomeScreen(prop: any): JSX.Element {
   const [text, onChangeText] = useState('');
@@ -16,7 +23,7 @@ function HomeScreen(prop: any): JSX.Element {
     <SafeAreaView style={styles.commonContainer}>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         {/* here below is carousel portion */}
-        <View style={{ flex: 1 }}>
+        <View style={{flex: 1}}>
           <Carousel
             loop
             width={width}
@@ -24,10 +31,9 @@ function HomeScreen(prop: any): JSX.Element {
             autoPlay={true}
             data={carouselImage}
             scrollAnimationDuration={1000}
-            renderItem={({ item }) => (
-              <View style={{ flex: 1, justifyContent: 'center' }}>
-                <Image source={item}
-                  style={{ width: width, height: 200 }} />
+            renderItem={({item}) => (
+              <View style={{flex: 1, justifyContent: 'center'}}>
+                <Image source={item} style={{width: width, height: 200}} />
               </View>
             )}
           />
@@ -37,7 +43,8 @@ function HomeScreen(prop: any): JSX.Element {
             return (
               <View>
                 <View key={index} style={HomeStyle.courseImageBackground}>
-                  <TouchableOpacity onPress={() => prop.navigation.navigate(item.option)}>
+                  <TouchableOpacity
+                    onPress={() => prop.navigation.navigate(item.option)}>
                     <Image
                       source={item.url}
                       style={HomeStyle.courseImageStyle}
@@ -51,8 +58,10 @@ function HomeScreen(prop: any): JSX.Element {
         </View>
         {/* Here below one dummy image is added in place of image to be added */}
         <View>
-          <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
-            style={{ height: 180, marginBottom: 20, marginTop: 20 }} />
+          <Image
+            source={{uri: 'https://reactjs.org/logo-og.png'}}
+            style={{height: 180, marginBottom: 20, marginTop: 20}}
+          />
         </View>
         <TextInput
           style={HomeStyle.input}
@@ -63,8 +72,8 @@ function HomeScreen(prop: any): JSX.Element {
         {/* button portion of footer */}
         <Footer navigation={prop.navigation} />
       </ScrollView>
-    </SafeAreaView >
+    </SafeAreaView>
   );
-};
+}
 
 export default HomeScreen;
