@@ -58,5 +58,10 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  bannerImage:{
+    height: 200,
+    marginBottom: 20,
+    marginTop: 20
+  }
 
 });

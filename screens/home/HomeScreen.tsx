@@ -60,7 +60,7 @@ function HomeScreen(prop: any): JSX.Element {
         <View>
           <Image
             source={{ uri: 'https://img.freepik.com/free-vector/education-horizontal-typography-banner-set-with-learning-knowledge-symbols-flat-illustration_1284-29493.jpg?w=1060&t=st=1687246376~exp=1687246976~hmac=11740afa50c4b6b993bd940db9841d062d62f2791c38bd5072f6d082dafa5615' }}
-            style={{ height: 180, marginBottom: 20, marginTop: 20 }}
+            style={styles.bannerImage}
           />
         </View>
         <TextInput

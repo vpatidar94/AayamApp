@@ -25,7 +25,7 @@ function AspireNeetDescription(prop: any): JSX.Element {
     return (
         <SafeAreaView style={styles.commonContainer}>
             <ScrollView contentInsetAdjustmentBehavior="automatic">
-                <View >
+                <View>
                     <View>
                         <Text style={AspireNeetDescriptionStyle.subHeading}>Course Details</Text>
                         <View style={AspireNeetDescriptionStyle.mainOption}>
@@ -59,7 +59,6 @@ function AspireNeetDescription(prop: any): JSX.Element {
                     <Text style={AspireNeetDescriptionStyle.subHeading}>Faculties (Click to know more)</Text>
                     {/* <ScrollView horizontal={true}> */}
                     <View style={AspireNeetDescriptionStyle.mainOption}>
-
                         {facultyList.map((faculty) => (
                             <TouchableOpacity
                                 key={faculty.id}
@@ -67,10 +66,10 @@ function AspireNeetDescription(prop: any): JSX.Element {
                                 onPress={() => handleFacultyPress(faculty)}
                             >
                                 <View>
-                                    <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
-                                    />
+                                    <Image source={{ uri: 'https://reactjs.org/logo-og.png' }} />
                                     <Text>{faculty.name}</Text>
-                                </View></TouchableOpacity>
+                                </View>
+                            </TouchableOpacity>
                         ))}
                     </View>
                     {/* </ScrollView> */}

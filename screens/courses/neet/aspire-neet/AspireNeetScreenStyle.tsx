@@ -2,6 +2,10 @@ import { StyleSheet } from 'react-native';
 import { color } from '../../../../styles/color';
 
 export const AspireNeetStyle = StyleSheet.create({
+    optionContainer:{
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
     subscriptionToggle: {
         paddingHorizontal: 8,
         paddingVertical: 4,

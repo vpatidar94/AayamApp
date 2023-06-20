@@ -8,6 +8,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
+
 import HomeScreen from './screens/home/HomeScreen';
 import TestScreen from './screens/test/TestScreen';
 import MyCourseScreen from './screens/footer-screens/my-course/MyCourseScreen';
@@ -28,6 +29,7 @@ import { color } from './styles/color';
 import DppScreen from './screens/dpp/DppScreen';
 import CourseSubscription from './screens/course-subscription/CourseSubscription';
 import AayamLogo from './components/aayam-logo/AayamLogo';
+// import Footer from './components/footer/Footer';
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -164,6 +166,7 @@ function App(): JSX.Element {
         />
       </Drawer.Navigator>
     </NavigationContainer>
+    
   );
 }
 export default App;

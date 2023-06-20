@@ -22,5 +22,10 @@ export const courseSubscriptionStyle = StyleSheet.create({
     activeSubscriptionToggleText: {
         color: 'white',
     },
+    btnContainer:{
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginVertical: 16
+    }
     // Rest of your styles
 });

@@ -12,12 +12,12 @@ import { FooterStyle } from './FooterStyle';
 
 function Footer(prop: any): JSX.Element {
   return (
-    <SafeAreaView>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
+    <SafeAreaView >
+      <ScrollView>
         <View style={FooterStyle.footerButton}>
           {footerOption.map((item, index) => {
             return (
-              <View key={index} style={{ flex: 1, justifyContent: 'center' }}>
+              <View key={index} style={{ flex: 1, justifyContent: 'center'}}>
                 <TouchableOpacity
                   onPress={() => prop.navigation.navigate(item.option)}>
                   <Image source={item.url} style={FooterStyle.footerImage} />

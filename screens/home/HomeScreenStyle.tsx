@@ -13,13 +13,12 @@ export const HomeStyle = StyleSheet.create({
     // it is for Find your course search bar
     input: {
       height: 40,
-      margin: 12,
       borderWidth: 1,
       padding: 10,
     },
     courseBlock: {
         width: '100%', 
-        marginTop: 20, 
+        marginTop: '10%', 
         flex: 1, 
         flexDirection: 'row', 
         alignItems: 'center', 

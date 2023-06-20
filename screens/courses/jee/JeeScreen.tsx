@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import Footer from '../../../components/footer/Footer';
 
 function JeeScreen(prop: any): JSX.Element {
   return (
@@ -12,6 +13,7 @@ function JeeScreen(prop: any): JSX.Element {
             onPress={() => prop.navigation.navigate('Home')}
           />
         </View>
+        <Footer/>
       </ScrollView>
     </SafeAreaView>
   );

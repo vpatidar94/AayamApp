@@ -5,7 +5,7 @@ export const FooterStyle = StyleSheet.create({
     footerButton: {
         flex: 1,
         flexDirection: 'row',
-        marginTop: 20,
+        marginTop: '10%',
         fontSize: 8,
         fontWeight: 'bold',
     },

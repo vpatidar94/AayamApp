@@ -31,16 +31,17 @@ export const AspireNeetDescriptionStyle = StyleSheet.create({
 
     },
     square: {
-        width: 8,
-        height: 8,
+        width: '3%',
+        height: '55%',
         backgroundColor: color.grey,
         marginRight: 5,
-        borderRadius: 8,
+        borderRadius: 5,
+        
     },
     sectionHeaderContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 5,
+        marginVertical: 5,
     },
     sectionHeaderTitle: {
         fontSize: 14,
@@ -53,10 +54,10 @@ export const AspireNeetDescriptionStyle = StyleSheet.create({
     },
     modalContent: {
         backgroundColor: 'white',
-        padding: 20,
+        padding: "10%",
         borderRadius: 8,
-        width: '80%',
-        maxHeight: '80%',
+        width: '90%',
+        maxHeight: '100%',
     },
     closeButton: {
         position: 'absolute',

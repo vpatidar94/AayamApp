@@ -52,11 +52,7 @@ function AspireNeetScreen(prop: any): JSX.Element {
                     </Text>
                     <Separator />
                     <View
-                        style={{
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            //   marginVertical: 16,
-                        }}>
+                        style={AspireNeetStyle.optionContainer}>
                         <TouchableOpacity
                             style={[
                                 AspireNeetStyle.subscriptionToggle,

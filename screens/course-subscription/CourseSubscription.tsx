@@ -24,7 +24,7 @@ function CourseSubscription(prop: any): JSX.Element {
             <ScrollView contentInsetAdjustmentBehavior="automatic">
                 <View style={{ flex: 1 }}>
                     {/* newly added code for toggle btn */}
-                    <View style={{ flexDirection: 'row', justifyContent: 'center', marginVertical: 16 }}>
+                    <View style={courseSubscriptionStyle.btnContainer}>
                         <TouchableOpacity
                             style={[courseSubscriptionStyle.subscriptionToggle, activeScreen === 'monthly' && courseSubscriptionStyle.activeSubscriptionToggle]}
                             onPress={handleMonthlySubscription}
