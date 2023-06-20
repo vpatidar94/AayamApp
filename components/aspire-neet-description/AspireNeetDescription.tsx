@@ -3,7 +3,7 @@ import { Button, SafeAreaView, ScrollView, Text, View, SectionList, Image, Touch
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
 import { AspireNeetDescriptionStyle } from './AspireNeetDescriptionStyle';
-import Footer from '../../components/footer/Footer';
+import Footer from '../footer/Footer';
 import { quantityList } from '../../const/QuantityList';
 import { otherDetails } from '../../const/OtherDetailsList';
 import { facultyList } from '../../const/FacultyList';
@@ -98,7 +98,7 @@ function AspireNeetDescription(prop: any): JSX.Element {
                     </Modal>
                 </View>
                 <View>
-                    <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
+                    <Image source={{ uri: 'https://as1.ftcdn.net/v2/jpg/06/04/44/50/1000_F_604445038_LkhBAATvrKzCJtwkVsr3m0y0maiAv0wF.jpg' }}
                         style={{ height: 200, marginBottom: 20, marginTop: 20 }} />
                 </View>
                 <View>

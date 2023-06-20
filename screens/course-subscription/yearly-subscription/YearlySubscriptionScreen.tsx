@@ -121,13 +121,13 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
         </View>
         <View>
           <Image
-            source={{uri: 'https://reactjs.org/logo-og.png'}}
+            source={{uri: 'https://as1.ftcdn.net/v2/jpg/06/04/44/50/1000_F_604445038_LkhBAATvrKzCJtwkVsr3m0y0maiAv0wF.jpg'}}
             style={{height: 200, marginBottom: 20, marginTop: 20}}
           />
         </View>
         <View>
           <Image
-            source={{uri: 'https://reactjs.org/logo-og.png'}}
+            source={{uri: 'https://img.freepik.com/free-vector/education-horizontal-typography-banner-set-with-learning-knowledge-symbols-flat-illustration_1284-29493.jpg?w=1060&t=st=1687246376~exp=1687246976~hmac=11740afa50c4b6b993bd940db9841d062d62f2791c38bd5072f6d082dafa5615'}}
             style={{height: 200, marginBottom: 20, marginTop: 20}}
           />
         </View>

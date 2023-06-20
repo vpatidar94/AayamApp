@@ -106,7 +106,7 @@ const quesCount = [
     },
 
 ]
-
+const Separator = () => <View style={styles.separator} />;
 function DppScreen(prop: any): JSX.Element {
     const [counter, setCounter] = useState(60);
     const [paused, setPaused] = useState(false);
@@ -126,7 +126,6 @@ function DppScreen(prop: any): JSX.Element {
             };
         }
     }, [paused, counter]);
-
 
     const handleOptionBtnPress = () => {
         setPaused(true);
@@ -150,8 +149,6 @@ function DppScreen(prop: any): JSX.Element {
         }
 
     }
-
-
     const handleResetBtnPress = () => {
         setCounter(60);
         setPaused(false);
@@ -210,50 +207,50 @@ function DppScreen(prop: any): JSX.Element {
                             )
                         })}
                     </View>
-
                 </ScrollView>
-                <View style={{ borderWidth: 2, borderColor: 'red' }}>
+                <Separator />
+                <View style={{ borderWidth: 2, borderColor: 'grey' }}>
                     <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", marginTop: 20 }}>
-                        <View style={{ backgroundColor: color.primary, width: 40, height: 40, borderRadius: 40, justifyContent: "center" }}>
-                        <TouchableOpacity onPress={handleNextBtnPress}><Text style={{ alignSelf: "center", fontSize: 15, fontWeight: "bold" }}>Q:{questionNumber}</Text></TouchableOpacity>
+                        <View style={{ backgroundColor: color.primary, width: 40, height: 40, borderRadius: 40, justifyContent: "center", opacity:0.7 }}>
+                            <TouchableOpacity onPress={handleNextBtnPress}><Text style={{ alignSelf: "center", fontSize: 15, fontWeight: "bold" }}>Q:{questionNumber}</Text></TouchableOpacity>
                         </View>
-                    <View style={{ backgroundColor: color.grey, width: 40, height: 40, borderRadius: 40, justifyContent: "center" }}>
-                    {/* <ImageBackground source={{ uri: 'https://t3.ftcdn.net/jpg/00/62/66/08/240_F_62660864_cqDjDlNr3l3DalE8FHbeYaauvz4nOm3q.jpg' }} style={{ width: "30%", height: '160%', }} >
+                        <View style={{ backgroundColor: color.grey, width: 40, height: 40, borderRadius: 40, justifyContent: "center" }}>
+                            {/* <ImageBackground source={{ uri: 'https://t3.ftcdn.net/jpg/00/62/66/08/240_F_62660864_cqDjDlNr3l3DalE8FHbeYaauvz4nOm3q.jpg' }} style={{ width: "30%", height: '160%', }} >
                         <Text >{counter}</Text>
                     </ImageBackground> */}
-                        {/* <Text >{counter}</Text> */}
+                            {/* <Text >{counter}</Text> */}
 
-                      <Text style={{ alignSelf: "center", fontSize: 15 }}>{counter}</Text> 
+                            <Text style={{ alignSelf: "center", fontSize: 15 }}>{counter}</Text>
 
-                    </View> 
+                        </View>
                     </View>
-                {/* <View> */}
-                <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
-                    style={{ height: 180, marginBottom: 20, marginTop: 20 }} />
-            </View>
-            <View>
-                <Text>Options</Text>
-                <View style={{ flex: 1 }}>
-                    <TouchableOpacity onPress={handleOptionBtnPress} style={{ backgroundColor: btncolor, marginBottom: 10, width:20, height:20, borderRadius:20 }}>
-                        <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>A</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ backgroundColor: color.primary, marginBottom: 10,  width:20, height:20, borderRadius:20 }}>
-                        <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>B</Text>
-                    </TouchableOpacity>
+                    {/* <View> */}
+                    <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
+                        style={{ height: 180, marginBottom: 10, marginTop: 20 }} />
+                </View>
+                <View>
+                    <Text style={{ marginVertical: 10, fontSize: 14, fontWeight: 'bold' }}>Options</Text>
+                    <View style={{ flex: 1 }}>
+                        <TouchableOpacity onPress={handleOptionBtnPress} style={{ backgroundColor: btncolor, marginBottom: 10, width: 20, height: 20, borderRadius: 20 }}>
+                            <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>A</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ backgroundColor: color.primary, marginBottom: 10, width: 20, height: 20, borderRadius: 20 }}>
+                            <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>B</Text>
+                        </TouchableOpacity>
 
-                    {/* <Button
+                        {/* <Button
                             title="B"
                             onPress={() => prop.navigation.navigate('Home')}
                         /> */}
-                </View>
-                <View style={{ flex: 1 }}>
-                    <TouchableOpacity style={{ backgroundColor: color.primary, marginBottom: 10,  width:20, height:20, borderRadius:20 }}>
-                        <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>C</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ backgroundColor: color.primary, marginBottom: 10,  width:20, height:20, borderRadius:20 }}>
-                        <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>D</Text>
-                    </TouchableOpacity>
-                    {/* <Button
+                    </View>
+                    <View style={{ flex: 1 }}>
+                        <TouchableOpacity style={{ backgroundColor: color.primary, marginBottom: 10, width: 20, height: 20, borderRadius: 20 }}>
+                            <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>C</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ backgroundColor: color.primary, marginBottom: 10, width: 20, height: 20, borderRadius: 20 }}>
+                            <Text style={{ textAlign: "center", fontSize: 14, fontWeight: "bold", }}>D</Text>
+                        </TouchableOpacity>
+                        {/* <Button
                             title="C"
                             onPress={() => prop.navigation.navigate('Home')}
                         />
@@ -261,26 +258,36 @@ function DppScreen(prop: any): JSX.Element {
                             title="D"
                             onPress={() => prop.navigation.navigate('Home')}
                         /> */}
+                    </View>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignContent: 'center', }}>
+                        <TouchableOpacity onPress={handleNextBtnPress}>
+                            <Text style={{backgroundColor:color.primary, opacity:0.6}}>Next</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={handleNextBtnPress}>
+                            <Text style={{backgroundColor:'#00bfff'}}>Reset</Text>
+                        </TouchableOpacity>
+                        {/* <Button title="Next" onPress={handleNextBtnPress} />
+                        <Button title="Reset" onPress={handleResetBtnPress} /> */}
+                    </View>
+                    <Separator />
+                    <View>
+                        <Text style={{ marginVertical: 5, fontSize: 14, fontWeight: 'bold' }}>Statistics</Text>
+                    </View>
+                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
+                        <Button title="Solutions" onPress={handleNextBtnPress} />
+                        <Button title="Explanation" onPress={handleNextBtnPress} />
+                    </View>
+                    <Separator />
+                    <Text style={{ marginVertical: 5, fontSize: 14, fontWeight: 'bold' }}>Check</Text>
+                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
+                        <Button title="Correct" onPress={handleNextBtnPress} />
+                        <Button title="Incorrect" onPress={handleNextBtnPress} />
+                        <Button title="Unattempted" onPress={handleNextBtnPress} />
+                    </View>
+                    <Separator />
                 </View>
-                <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginVertical: 20, alignContent: 'center', }}>
-                    <Button title="Next" onPress={handleNextBtnPress} />
-                    <Button title="Reset" onPress={handleResetBtnPress} />
-                </View>
-                <View>
-                    <Text>Statistics</Text>
-                </View>
-                <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
-                    <Button title="Solutions" onPress={handleNextBtnPress} />
-                    <Button title="Explanation" onPress={handleNextBtnPress} />
-                </View>
-                <Text>Check</Text>
-                <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
-                    <Button title="Correct" onPress={handleNextBtnPress} />
-                    <Button title="Incorrect" onPress={handleNextBtnPress} />
-                    <Button title="Unattempted" onPress={handleNextBtnPress} />
-                </View>
-            </View>
-        </ScrollView>
+            </ScrollView>
         </SafeAreaView >
     );
 }

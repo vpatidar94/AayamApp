@@ -17,7 +17,7 @@ import { otherDetails } from '../../../../const/OtherDetailsList';
 import { facultyList } from '../../../../const/FacultyList';
 // import { courseSubscriptionStyle } from '../../screens/coursesubscription/CourseSubscriptionStyle';
 import TestScreen from '../../../test/TestScreen';
-import AspireNeetDescription from '../../../../components/aspireneetdescription/AspireNeetDescription';
+import AspireNeetDescription from '../../../../components/aspire-neet-description/AspireNeetDescription';
 
 const Separator = () => <View style={styles.separator} />;
 function AspireNeetScreen(prop: any): JSX.Element {

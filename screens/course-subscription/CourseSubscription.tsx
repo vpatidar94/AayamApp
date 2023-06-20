@@ -4,8 +4,8 @@ import { monthlyPurchasingList } from '../../const/MonthlyPurchasingList';
 import { styles } from '../../styles/style';
 import { color } from '../../styles/color';
 import Footer from '../../components/footer/Footer';
-import MonthlySubscriptionScreen from './monthlysubscription/MonthlySubscriptionScreen';
-import YearlySubscriptionScreen from './yearlysubscription/YearlySubscriptionScreen';
+import MonthlySubscriptionScreen from './monthly-subscription/MonthlySubscriptionScreen';
+import YearlySubscriptionScreen from './yearly-subscription/YearlySubscriptionScreen';
 import { courseSubscriptionStyle } from './CourseSubscriptionStyle';
 
 const Separator = () => <View style={styles.separator} />;

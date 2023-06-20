@@ -80,7 +80,7 @@ function NeetSection(prop: any): JSX.Element {
           </View>
           {/* banner */}
           <View>
-            <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
+            <Image source={{ uri: 'https://as1.ftcdn.net/v2/jpg/06/04/44/50/1000_F_604445038_LkhBAATvrKzCJtwkVsr3m0y0maiAv0wF.jpg' }}
               style={{ height: 200, margin: 10 }} />
           </View>
 
