@@ -112,7 +112,7 @@ function AspireNeetDescription(prop: any): JSX.Element {
                     </View>
                     <View>
                         <Text style={AspireNeetDescriptionStyle.subHeading}>Other Details</Text>
-                        <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minima est voluptatem itaque doloribus reprehenderit, recusandae magnam vero dicta quasi mollitia animi inventore labore non nesciunt. Obcaecati voluptate doloremque itaque.</Text>
+                        <Text style={AspireNeetDescriptionStyle.otherDetails}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minima est voluptatem itaque doloribus reprehenderit, recusandae magnam vero dicta quasi mollitia animi inventore labore non nesciunt. Obcaecati voluptate doloremque itaque.</Text>
                     </View>
                 </View>
                 <Footer navigation={prop.navigation} />

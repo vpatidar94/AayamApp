@@ -11,7 +11,7 @@ function NeetSection(prop: any): JSX.Element {
     <SafeAreaView>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
-          <Text style={[styles.sectionTitle, { marginTop: 10, textAlign: 'center' }]}>NEET</Text>
+          <Text style={[styles.sectionTitle, { marginTop: 10, textAlign: 'center', color: color.secondary }]}>NEET</Text>
 
           <View style={stylesNeet.container}>
             {courses.map((option, index) => (
@@ -86,14 +86,14 @@ function NeetSection(prop: any): JSX.Element {
 
           {/* About Neet */}
           <View style={{ margin: 10 }}>
-            <Text style={styles.sectionTitle}>About NEET</Text>
-            <Text style={[styles.sectionDescription, { textAlign: 'justify' }]}>NEET stands for National Eligibility cum Entrance Test. It is a single-level national exam carried out for medical aspirants enabling them to seek admissions to medical courses across different medical institutes of the country.
+            <Text style={[styles.sectionTitle, { color: color.black }]}>About NEET</Text>
+            <Text style={[styles.sectionDescription, { textAlign: 'justify', color: color.black }]}>NEET stands for National Eligibility cum Entrance Test. It is a single-level national exam carried out for medical aspirants enabling them to seek admissions to medical courses across different medical institutes of the country.
               {'\n'} {'\n'}From the year 2020 onwards, the exam has emerged as the only medical entrance exam that has to be qualified to seek admission even to AIIMS and JIPMER institutes thereby scrapping the multiple entrance exams that were carried out previously at state levels.
               {'\n'} {'\n'}The government of India introduced NEET as a plan to conduct one exam replacing multiple exams that were being conducted as part of the One Nation One Examination policy. NEET is an offline test carried out in a pen-paper mode, standing as the only medical entrance exam at UG level, to be following this model.</Text>
           </View>
 
           {/* Testimonials */}
-          <Text style={[styles.sectionTitle, { margin: 10, textAlign: 'left' }]}>Testimonials</Text>
+          <Text style={[styles.sectionTitle, { margin: 10, textAlign: 'left', color: color.black }]}>Testimonials</Text>
           <View style={stylesNeet.container}>
             <View>
               <TouchableOpacity onPress={() => prop.navigation.navigate('Test')}>
@@ -105,7 +105,7 @@ function NeetSection(prop: any): JSX.Element {
                   style={{ width: 80, height: 80, margin: 10 }}
                 />
               </TouchableOpacity>
-              <Text style={{ textAlign: 'center' }}>NEET</Text>
+              <Text style={{ textAlign: 'center', color: color.black }}>NEET</Text>
             </View>
             <View>
               <TouchableOpacity onPress={() => prop.navigation.navigate('Test')}>
@@ -117,7 +117,7 @@ function NeetSection(prop: any): JSX.Element {
                   style={{ width: 80, height: 80, margin: 10 }}
                 />
               </TouchableOpacity>
-              <Text style={{ textAlign: 'center' }}>NEET</Text>
+              <Text style={{ textAlign: 'center', color: color.black }}>NEET</Text>
             </View>
             <View>
               <TouchableOpacity onPress={() => prop.navigation.navigate('Test')}>
@@ -130,7 +130,7 @@ function NeetSection(prop: any): JSX.Element {
 
                 />
               </TouchableOpacity>
-              <Text style={{ textAlign: 'center' }}>NEET</Text>
+              <Text style={{ textAlign: 'center', color: color.black }}>NEET</Text>
             </View>
           </View>
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   SafeAreaView,
@@ -11,9 +11,9 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {yearlyPurchasingList} from '../../../const/YearlyPurchasingList';
-import {styles} from '../../../styles/style';
-import {color} from '../../../styles/color';
+import { yearlyPurchasingList } from '../../../const/YearlyPurchasingList';
+import { styles } from '../../../styles/style';
+import { color } from '../../../styles/color';
 import { MonthlyCourseStyle } from '../monthly-subscription/MonthlySubscriptionStyle';
 import Footer from '../../../components/footer/Footer';
 
@@ -42,13 +42,13 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
   return (
     <SafeAreaView style={styles.commonContainer}>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View style={{flex: 1}}>
+        <View style={{ flex: 1 }}>
           <Text
             style={[
               styles.sectionTitle,
-              {color: color.secondary},
-              {marginTop: 8},
-              {marginBottom: 8},
+              { color: color.secondary },
+              { marginTop: 8 },
+              { marginBottom: 8 },
             ]}>
             Purchase Yearly Subscription
           </Text>
@@ -66,7 +66,7 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
                         <Text style={MonthlyCourseStyle.selectTick}>&#10003;</Text>
                       )}
                     </View>
-                    <View style={{width: '40%'}}>
+                    <View style={{ width: '40%' }}>
                       <Text
                         style={MonthlyCourseStyle.purchasingItem}>
                         {item.purchasingItem}
@@ -95,13 +95,13 @@ function YearlySubscriptionScreen(prop: any): JSX.Element {
         </View>
         <View>
           <Image
-            source={{uri: 'https://as1.ftcdn.net/v2/jpg/06/04/44/50/1000_F_604445038_LkhBAATvrKzCJtwkVsr3m0y0maiAv0wF.jpg'}}
+            source={{ uri: 'https://as1.ftcdn.net/v2/jpg/06/04/44/50/1000_F_604445038_LkhBAATvrKzCJtwkVsr3m0y0maiAv0wF.jpg' }}
             style={styles.bannerImage}
           />
         </View>
         <View>
           <Image
-            source={{uri: 'https://img.freepik.com/free-vector/education-horizontal-typography-banner-set-with-learning-knowledge-symbols-flat-illustration_1284-29493.jpg?w=1060&t=st=1687246376~exp=1687246976~hmac=11740afa50c4b6b993bd940db9841d062d62f2791c38bd5072f6d082dafa5615'}}
+            source={{ uri: 'https://img.freepik.com/free-vector/education-horizontal-typography-banner-set-with-learning-knowledge-symbols-flat-illustration_1284-29493.jpg?w=1060&t=st=1687246376~exp=1687246976~hmac=11740afa50c4b6b993bd940db9841d062d62f2791c38bd5072f6d082dafa5615' }}
             style={styles.bannerImage}
           />
         </View>

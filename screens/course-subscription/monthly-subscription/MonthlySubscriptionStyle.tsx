@@ -19,10 +19,12 @@ export const MonthlyCourseStyle = StyleSheet.create({
     purchasingItem: {
         textAlign: 'justify',
         fontSize: 14,
+        color: color.black,
     },
     itemPrice: {
         textAlign: 'center',
-        fontSize: 14
+        fontSize: 14,
+        color: color.black,
     },
     totalPrice: {
         fontSize: 16,

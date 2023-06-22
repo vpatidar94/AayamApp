@@ -25,15 +25,16 @@ export const AspireNeetDescriptionStyle = StyleSheet.create({
         borderRadius: 4,
     },
     listDataStyle: {
-        fontWeight: '900',
+        fontWeight: '700',
         marginBottom: 5,
         marginLeft: 15,
+        color:'#fa8072',
 
     },
     square: {
         width: '3%',
         height: '55%',
-        backgroundColor: color.grey,
+        backgroundColor: color.secondary,
         marginRight: 5,
         borderRadius: 5,
         
@@ -45,6 +46,8 @@ export const AspireNeetDescriptionStyle = StyleSheet.create({
     },
     sectionHeaderTitle: {
         fontSize: 14,
+        color:color.black,
+        fontWeight:'600',
     },
     modalBackground: {
         flex: 1,
@@ -71,5 +74,8 @@ export const AspireNeetDescriptionStyle = StyleSheet.create({
         fontWeight: 'bold',
         color: 'black',
       },
+      otherDetails: {
+        color: color.black
+      }
 
 });
